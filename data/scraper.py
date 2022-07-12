@@ -7,7 +7,7 @@ price_list = []
 feature_list = []
 location_list = []
 for page in range(1,129):
-    url = f'https://www.plusvalia.com/casas-en-venta-en-quito-hasta-10-anos-pagina-{page}.html'
+    url = f'https://www.plusvalia.com/casas-en-venta-en-quito-hasta-20-anos-pagina-{page}.html'
     info = scraper.get(url).text
     soup = BeautifulSoup(info, 'lxml')
     prices = soup.find_all('div', attrs={ 'data-qa':'POSTING_CARD_PRICE'  })
